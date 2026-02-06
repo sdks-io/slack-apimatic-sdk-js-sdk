@@ -1,0 +1,40 @@
+
+# Conversations Create Error Schema Error
+
+Schema for error response from conversations.create method
+
+*This model accepts additional fields of type unknown.*
+
+## Structure
+
+`ConversationsCreateErrorSchemaError`
+
+## Fields
+
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
+| `detail` | `string \| undefined` | Optional | - |
+| `error` | [`Error32`](../../doc/models/error-32.md) | Required | - |
+| `needed` | `string \| undefined` | Optional | - |
+| `ok` | `string` | Required, Constant | **Value**: `'False'` |
+| `provided` | `string \| undefined` | Optional | - |
+| `additionalProperties` | `Record<string, unknown>` | Optional | - |
+
+## Example (as JSON)
+
+```json
+{
+  "error": "invalid_array_arg",
+  "ok": "False",
+  "callstack": "callstack0",
+  "detail": "detail4",
+  "needed": "needed4",
+  "provided": "provided0",
+  "exampleAdditionalProperty": {
+    "key1": "val1",
+    "key2": "val2"
+  }
+}
+```
+
