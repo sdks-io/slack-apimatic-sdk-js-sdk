@@ -14,7 +14,7 @@ Schema for error response from conversations.join method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error37`](../../doc/models/error-37.md) | Required | - |
+| `error` | [`ConversationsJoinErrorEnum`](../../doc/models/conversations-join-error-enum.md) | Required | - |
 | `needed` | `string \| undefined` | Optional | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `provided` | `string \| undefined` | Optional | - |

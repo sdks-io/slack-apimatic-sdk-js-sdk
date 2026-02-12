@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error74 } from '../models/error74.js';
+import { RtmConnectErrorEnum } from '../models/rtmConnectErrorEnum.js';
 
 /**
  * Creates an instance of TeamInfoErrorSchema
@@ -13,7 +13,7 @@ import { Error74 } from '../models/error74.js';
 interface TeamInfoErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error74;
+  error: RtmConnectErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

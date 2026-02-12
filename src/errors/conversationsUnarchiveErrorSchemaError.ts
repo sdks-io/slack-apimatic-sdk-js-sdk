@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error48 } from '../models/error48.js';
+import { ConversationsUnarchiveErrorEnum } from '../models/conversationsUnarchiveErrorEnum.js';
 
 /**
  * Creates an instance of ConversationsUnarchiveErrorSchema
@@ -13,7 +13,7 @@ import { Error48 } from '../models/error48.js';
 interface ConversationsUnarchiveErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error48;
+  error: ConversationsUnarchiveErrorEnum;
   needed?: string;
   ok: string;
   provided?: string;

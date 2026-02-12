@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error49 } from '../models/error49.js';
+import { DialogOpenErrorEnum } from '../models/dialogOpenErrorEnum.js';
 
 /**
  * Creates an instance of DialogOpenErrorSchema
@@ -13,7 +13,7 @@ import { Error49 } from '../models/error49.js';
 interface DialogOpenErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error49;
+  error: DialogOpenErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

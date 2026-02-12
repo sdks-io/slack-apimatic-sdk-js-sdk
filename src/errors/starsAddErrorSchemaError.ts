@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error75 } from '../models/error75.js';
+import { StarsAddErrorEnum } from '../models/starsAddErrorEnum.js';
 
 /**
  * Creates an instance of StarsAddErrorSchema
@@ -13,7 +13,7 @@ import { Error75 } from '../models/error75.js';
 interface StarsAddErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error75;
+  error: StarsAddErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

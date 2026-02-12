@@ -14,7 +14,7 @@ Schema for error response from files.list method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error57`](../../doc/models/error-57.md) | Required | - |
+| `error` | [`FilesListErrorEnum`](../../doc/models/files-list-error-enum.md) | Required | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `additionalProperties` | `Record<string, unknown>` | Optional | - |
 

@@ -43,10 +43,10 @@ const client = Client.fromJsonConfig(JSON.stringify(configModule.default));
   "timeout": 30000,
   "environment": "production",
   "authorizationCodeAuthCredentials": {
-    "oAuthClientId": "oauthclientid",
-    "oAuthClientSecret": "oauthclientsecret",
-    "oAuthRedirectUri": "oauthredirecturi",
-    "oAuthClockSkew": 0
+    "oauthClientId": "oauthclientid",
+    "oauthClientSecret": "oauthclientsecret",
+    "oauthRedirectUri": "oauthredirecturi",
+    "oauthClockSkew": 0
   },
   "httpClientOptions": {
     "timeout": 30000,

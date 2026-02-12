@@ -19,10 +19,8 @@ export class RtmApi extends BaseApi {
    *
    * @param token                Authentication token. Requires scope: `rtm:stream`
    * @param batchPresenceAware   Batch presence deliveries via subscription. Enabling changes the shape of
-   *                                        `presence_change` events. See [batch presence](/docs/presence-and-
-   *                                        status#batching).
-   * @param presenceSub          Only deliver presence events when requested by subscription. See [presence
-   *                                        subscriptions](/docs/presence-and-status#subscriptions).
+   *                                        `presence_change` events.
+   * @param presenceSub          Only deliver presence events when requested by subscription
    * @return Response from the API call
    */
   async rtmConnect(

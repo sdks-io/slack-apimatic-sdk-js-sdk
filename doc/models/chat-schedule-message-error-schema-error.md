@@ -14,7 +14,7 @@ Schema for error response chat.scheduleMessage method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error26`](../../doc/models/error-26.md) | Required | - |
+| `error` | [`ChatScheduleMessageErrorEnum`](../../doc/models/chat-schedule-message-error-enum.md) | Required | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `additionalProperties` | `Record<string, unknown>` | Optional | - |
 

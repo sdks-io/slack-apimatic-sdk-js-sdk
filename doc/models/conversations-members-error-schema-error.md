@@ -14,7 +14,7 @@ Schema for error response conversations.members method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error42`](../../doc/models/error-42.md) | Required | - |
+| `error` | [`ConversationsMembersErrorEnum`](../../doc/models/conversations-members-error-enum.md) | Required | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `additionalProperties` | `Record<string, unknown>` | Optional | - |
 

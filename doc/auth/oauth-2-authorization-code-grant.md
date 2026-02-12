@@ -9,14 +9,14 @@ Documentation for accessing and setting credentials for slackAuth.
 
 | Name | Type | Description | Setter |
 |  --- | --- | --- | --- |
-| OAuthClientId | `string` | OAuth 2 Client ID | `oAuthClientId` |
-| OAuthClientSecret | `string` | OAuth 2 Client Secret | `oAuthClientSecret` |
-| OAuthRedirectUri | `string` | OAuth 2 Redirection endpoint or Callback Uri | `oAuthRedirectUri` |
-| OAuthToken | `OAuthToken` | Object for storing information about the OAuth token | `oAuthToken` |
-| OAuthScopes | `OAuthScope[]` | List of scopes that apply to the OAuth token | `oAuthScopes` |
-| OAuthClockSkew | `number` | Clock skew time in seconds applied while checking the OAuth Token expiry. | `clockSkew` |
-| OAuthTokenProvider | `(lastOAuthToken: OAuthToken \| undefined, authManager: AuthorizationCodeAuthManager) => Promise<OAuthToken>` | Registers a callback for oAuth Token Provider used for automatic token fetching/refreshing. | `oAuthTokenProvider` |
-| OAuthOnTokenUpdate | `(token: OAuthToken) => void` | Registers a callback for token update event. | `oAuthOnTokenUpdate` |
+| oauthClientId | `string` | OAuth 2 Client ID | `oauthClientId` |
+| oauthClientSecret | `string` | OAuth 2 Client Secret | `oauthClientSecret` |
+| oauthRedirectUri | `string` | OAuth 2 Redirection endpoint or Callback Uri | `oauthRedirectUri` |
+| oauthToken | `OauthToken` | Object for storing information about the OAuth token | `oauthToken` |
+| oauthScopes | `OauthScope[]` | List of scopes that apply to the OAuth token | `oauthScopes` |
+| oauthClockSkew | `number` | Clock skew time in seconds applied while checking the OAuth Token expiry. | `clockSkew` |
+| oauthTokenProvider | `(lastOAuthToken: OauthToken \| undefined, authManager: AuthorizationCodeAuthManager) => Promise<OauthToken>` | Registers a callback for oAuth Token Provider used for automatic token fetching/refreshing. | `oauthTokenProvider` |
+| oauthOnTokenUpdate | `(token: OauthToken) => void` | Registers a callback for token update event. | `oauthOnTokenUpdate` |
 
 
 
@@ -29,16 +29,16 @@ Documentation for accessing and setting credentials for slackAuth.
 You must initialize the client with *OAuth 2.0 Authorization Code Grant* credentials as shown in the following code snippet.
 
 ```ts
-import { Client, OAuthScope } from 'slack-apimatic-sdk-sdk';
+import { Client, OauthScope } from 'slack-apimatic-sdk-sdk';
 
 const client = new Client({
   authorizationCodeAuthCredentials: {
-    oAuthClientId: 'OAuthClientId',
-    oAuthClientSecret: 'OAuthClientSecret',
-    oAuthRedirectUri: 'OAuthRedirectUri',
-    oAuthScopes: [
-      OAuthScope.Admin,
-      OAuthScope.AdminAppsread
+    oauthClientId: 'OAuthClientId',
+    oauthClientSecret: 'OAuthClientSecret',
+    oauthRedirectUri: 'OAuthRedirectUri',
+    oauthScopes: [
+      OauthScope.Admin,
+      OauthScope.AdminAppsread
     ]
   },
 });
@@ -83,7 +83,7 @@ try {
     client.withConfiguration({
       authorizationCodeAuthCredentials: {
         ...config.authorizationCodeAuthCredentials,
-        oAuthToken: token
+        oauthToken: token
       }
     });
   }
@@ -94,7 +94,7 @@ try {
 
 ### Scopes
 
-Scopes enable your application to only request access to the resources it needs while enabling users to control the amount of access they grant to your application. Available scopes are defined in the [`OAuthScope`](../../doc/models/o-auth-scope.md) enumeration.
+Scopes enable your application to only request access to the resources it needs while enabling users to control the amount of access they grant to your application. Available scopes are defined in the [`OauthScope`](../../doc/models/oauth-scope.md) enumeration.
 
 | Scope Name | Description |
 |  --- | --- |
@@ -196,7 +196,7 @@ To authorize a client using a stored access token, just set the access token in 
 const newClient = client.withConfiguration({
   authorizationCodeAuthCredentials: {
     ...config.authorizationCodeAuthCredentials,
-    oAuthToken: token
+    oauthToken: token
   }
 });
 ```
@@ -208,8 +208,8 @@ const newClient = client.withConfiguration({
 ```ts
 import {
   Client,
-  OAuthScope,
-  OAuthToken,
+  OauthScope,
+  OauthToken,
 } from 'slack-apimatic-sdk-sdk';
 
 // function for storing token to database
@@ -226,12 +226,12 @@ async function loadTokenFromDatabase(): Promise<OAuthToken | undefined> {
 // create a new client from configuration
 const client = new Client({
   authorizationCodeAuthCredentials: {
-    oAuthClientId: 'OAuthClientId',
-    oAuthClientSecret: 'OAuthClientSecret',
-    oAuthRedirectUri: 'OAuthRedirectUri',
-    oAuthScopes: [
-      OAuthScope.Admin,
-      OAuthScope.AdminAppsread
+    oauthClientId: 'OAuthClientId',
+    oauthClientSecret: 'OAuthClientSecret',
+    oauthRedirectUri: 'OAuthRedirectUri',
+    oauthScopes: [
+      OauthScope.Admin,
+      OauthScope.AdminAppsread
     ]
   },
 });
@@ -243,7 +243,7 @@ if (previousToken) {
   client.withConfiguration({
     authorizationCodeAuthCredentials: {
       ...config.authorizationCodeAuthCredentials,
-      oAuthToken: previousToken
+      oauthToken: previousToken
     }
   });
 }

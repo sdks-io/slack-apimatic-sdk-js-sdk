@@ -5,13 +5,13 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error1 } from '../models/error1.js';
+import { AdminConversationsConvertToPrivateErrorEnum } from '../models/adminConversationsConvertToPrivateErrorEnum.js';
 
 /**
  * Creates an instance of AdminConversationsConvertToPrivateErrorSchema
  */
 interface AdminConversationsConvertToPrivateErrorSchema {
-  error: Error1;
+  error: AdminConversationsConvertToPrivateErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

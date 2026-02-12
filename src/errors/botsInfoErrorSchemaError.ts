@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error19 } from '../models/error19.js';
+import { BotsInfoErrorEnum } from '../models/botsInfoErrorEnum.js';
 
 /**
  * Creates an instance of BotsInfoErrorSchema
@@ -13,7 +13,7 @@ import { Error19 } from '../models/error19.js';
 interface BotsInfoErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error19;
+  error: BotsInfoErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

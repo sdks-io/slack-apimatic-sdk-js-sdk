@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error84 } from '../models/error84.js';
+import { UsergroupsEnableErrorEnum } from '../models/usergroupsEnableErrorEnum.js';
 
 /**
  * Creates an instance of UsergroupsListErrorSchema
@@ -13,7 +13,7 @@ import { Error84 } from '../models/error84.js';
 interface UsergroupsListErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error84;
+  error: UsergroupsEnableErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

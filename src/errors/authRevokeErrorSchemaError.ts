@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error17 } from '../models/error17.js';
+import { AuthRevokeErrorEnum } from '../models/authRevokeErrorEnum.js';
 
 /**
  * Creates an instance of AuthRevokeErrorSchema
@@ -13,7 +13,7 @@ import { Error17 } from '../models/error17.js';
 interface AuthRevokeErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error17;
+  error: AuthRevokeErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

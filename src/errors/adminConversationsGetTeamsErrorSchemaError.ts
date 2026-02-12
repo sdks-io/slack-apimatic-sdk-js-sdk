@@ -5,13 +5,13 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error6 } from '../models/error6.js';
+import { AdminConversationsGetTeamsErrorEnum } from '../models/adminConversationsGetTeamsErrorEnum.js';
 
 /**
  * Creates an instance of AdminConversationsGetTeamsErrorSchema
  */
 interface AdminConversationsGetTeamsErrorSchema {
-  error: Error6;
+  error: AdminConversationsGetTeamsErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

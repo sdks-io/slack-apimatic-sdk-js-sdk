@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error78 } from '../models/error78.js';
+import { TeamAccessLogsErrorEnum } from '../models/teamAccessLogsErrorEnum.js';
 
 /**
  * Creates an instance of TeamAccessLogsErrorSchema
@@ -13,7 +13,7 @@ import { Error78 } from '../models/error78.js';
 interface TeamAccessLogsErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error78;
+  error: TeamAccessLogsErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

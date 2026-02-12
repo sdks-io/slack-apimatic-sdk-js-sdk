@@ -14,7 +14,7 @@ Schema for error response chat.postMessage method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error25`](../../doc/models/error-25.md) | Required | - |
+| `error` | [`ChatPostMessageErrorEnum`](../../doc/models/chat-post-message-error-enum.md) | Required | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `additionalProperties` | `Record<string, unknown>` | Optional | - |
 

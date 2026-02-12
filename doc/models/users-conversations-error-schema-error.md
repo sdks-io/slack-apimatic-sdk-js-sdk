@@ -14,7 +14,7 @@ Schema for error response from users.conversations method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error89`](../../doc/models/error-89.md) | Required | - |
+| `error` | [`UsersConversationsErrorEnum`](../../doc/models/users-conversations-error-enum.md) | Required | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `additionalProperties` | `Record<string, unknown>` | Optional | - |
 

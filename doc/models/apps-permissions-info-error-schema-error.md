@@ -14,7 +14,7 @@ Schema for error response from apps.permissions.info method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error12`](../../doc/models/error-12.md) | Required | - |
+| `error` | [`AppsPermissionsInfoErrorEnum`](../../doc/models/apps-permissions-info-error-enum.md) | Required | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `additionalProperties` | `Record<string, unknown>` | Optional | - |
 

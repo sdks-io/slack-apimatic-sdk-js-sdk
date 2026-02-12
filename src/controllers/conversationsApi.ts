@@ -208,8 +208,7 @@ export class ConversationsApi extends BaseApi {
    *                                may be returned, even if the end of the users list hasn't been reached.
    * @param cursor       Paginate through collections of data by setting the `cursor` parameter to a
    *                                `next_cursor` attribute returned by a previous request's `response_metadata`.
-   *                                Default value fetches the first "page" of the collection. See
-   *                                [pagination](/docs/pagination) for more detail.
+   *                                Default value fetches the first "page" of the collection.
    * @return Response from the API call
    */
   async conversationsHistory(
@@ -422,8 +421,7 @@ export class ConversationsApi extends BaseApi {
    *                                    an integer no larger than 1000.
    * @param cursor           Paginate through collections of data by setting the `cursor` parameter to a
    *                                    `next_cursor` attribute returned by a previous request's `response_metadata`.
-   *                                    Default value fetches the first "page" of the collection. See
-   *                                    [pagination](/docs/pagination) for more detail.
+   *                                    Default value fetches the first "page" of the collection.
    * @return Response from the API call
    */
   async conversationsList(
@@ -497,8 +495,7 @@ export class ConversationsApi extends BaseApi {
    *                               be returned, even if the end of the users list hasn't been reached.
    * @param cursor       Paginate through collections of data by setting the `cursor` parameter to a
    *                               `next_cursor` attribute returned by a previous request's `response_metadata`.
-   *                               Default value fetches the first "page" of the collection. See
-   *                               [pagination](/docs/pagination) for more detail.
+   *                               Default value fetches the first "page" of the collection.
    * @return Response from the API call
    */
   async conversationsMembers(
@@ -623,8 +620,7 @@ export class ConversationsApi extends BaseApi {
    *                                may be returned, even if the end of the users list hasn't been reached.
    * @param cursor       Paginate through collections of data by setting the `cursor` parameter to a
    *                                `next_cursor` attribute returned by a previous request's `response_metadata`.
-   *                                Default value fetches the first "page" of the collection. See
-   *                                [pagination](/docs/pagination) for more detail.
+   *                                Default value fetches the first "page" of the collection.
    * @return Response from the API call
    */
   async conversationsReplies(

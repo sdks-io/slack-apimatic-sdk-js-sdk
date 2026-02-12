@@ -21,17 +21,17 @@ import {
   Client,
   Environment,
   LogLevel,
-  OAuthScope,
+  OauthScope,
 } from 'slack-apimatic-sdk-sdk';
 
 const client = new Client({
   authorizationCodeAuthCredentials: {
-    oAuthClientId: 'OAuthClientId',
-    oAuthClientSecret: 'OAuthClientSecret',
-    oAuthRedirectUri: 'OAuthRedirectUri',
-    oAuthScopes: [
-      OAuthScope.Admin,
-      OAuthScope.AdminAppsread
+    oauthClientId: 'OAuthClientId',
+    oauthClientSecret: 'OAuthClientSecret',
+    oauthRedirectUri: 'OAuthRedirectUri',
+    oauthScopes: [
+      OauthScope.Admin,
+      OauthScope.AdminAppsread
     ]
   },
   timeout: 30000,

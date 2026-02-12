@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error67 } from '../models/error67.js';
+import { ReactionsListErrorEnum } from '../models/reactionsListErrorEnum.js';
 
 /**
  * Creates an instance of ReactionsListErrorSchema
@@ -13,7 +13,7 @@ import { Error67 } from '../models/error67.js';
 interface ReactionsListErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error67;
+  error: ReactionsListErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

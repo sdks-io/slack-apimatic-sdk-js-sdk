@@ -14,7 +14,7 @@ Schema for error response from files.revokePublicURL method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error58`](../../doc/models/error-58.md) | Required | - |
+| `error` | [`FilesRevokePublicUrlErrorEnum`](../../doc/models/files-revoke-public-url-error-enum.md) | Required | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `additionalProperties` | `Record<string, unknown>` | Optional | - |
 

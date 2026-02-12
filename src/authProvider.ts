@@ -11,7 +11,7 @@ import {
 } from './authentication.js';
 import { AuthorizationCodeAuthManager } from './authorizationCodeAuthManager.js';
 import { Configuration } from './configuration.js';
-import { OAuthToken } from './models/oAuthToken.js';
+import { OauthToken } from './models/oauthToken.js';
 
 export function createAuthProviderFromConfig(
   config: Partial<Configuration>,
@@ -21,14 +21,14 @@ export function createAuthProviderFromConfig(
     slackAuth:
       config.authorizationCodeAuthCredentials &&
       requestAuthenticationProvider(
-        config.authorizationCodeAuthCredentials.oAuthToken,
+        config.authorizationCodeAuthCredentials.oauthToken,
         slackAuthTokenProvider(
           slackAuth,
-          config.authorizationCodeAuthCredentials.oAuthTokenProvider
+          config.authorizationCodeAuthCredentials.oauthTokenProvider
         ),
-        config.authorizationCodeAuthCredentials.oAuthOnTokenUpdate,
+        config.authorizationCodeAuthCredentials.oauthOnTokenUpdate,
         {
-          clockSkew: config.authorizationCodeAuthCredentials.oAuthClockSkew,
+          clockSkew: config.authorizationCodeAuthCredentials.oauthClockSkew,
         } as OAuthConfiguration
       ),
   };
@@ -43,12 +43,12 @@ function slackAuthTokenProvider(
   slackAuth: () => AuthorizationCodeAuthManager,
   defaultProvider:
     | ((
-        lastOAuthToken: OAuthToken | undefined,
+        lastOAuthToken: OauthToken | undefined,
         authManager: AuthorizationCodeAuthManager
-      ) => Promise<OAuthToken>)
+      ) => Promise<OauthToken>)
     | undefined
-): ((token: OAuthToken | undefined) => Promise<OAuthToken>) | undefined {
-  return (token: OAuthToken | undefined) => {
+): ((token: OauthToken | undefined) => Promise<OauthToken>) | undefined {
+  return (token: OauthToken | undefined) => {
     const manager = slackAuth();
     if (defaultProvider === undefined) {
       return manager.updateToken(token);

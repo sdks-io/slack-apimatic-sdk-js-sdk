@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error12 } from '../models/error12.js';
+import { AppsPermissionsInfoErrorEnum } from '../models/appsPermissionsInfoErrorEnum.js';
 
 /**
  * Creates an instance of TeamIntegrationLogsErrorSchema
@@ -13,7 +13,7 @@ import { Error12 } from '../models/error12.js';
 interface TeamIntegrationLogsErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error12;
+  error: AppsPermissionsInfoErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

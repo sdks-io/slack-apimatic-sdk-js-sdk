@@ -13,7 +13,7 @@ Schema for error response from admin.conversations.disconnectShared
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `error` | [`Error4`](../../doc/models/error-4.md) | Required | - |
+| `error` | [`AdminConversationsDisconnectSharedErrorEnum`](../../doc/models/admin-conversations-disconnect-shared-error-enum.md) | Required | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `additionalProperties` | `Record<string, unknown>` | Optional | - |
 

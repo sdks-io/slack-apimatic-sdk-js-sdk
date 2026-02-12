@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error57 } from '../models/error57.js';
+import { FilesListErrorEnum } from '../models/filesListErrorEnum.js';
 
 /**
  * Creates an instance of FilesListErrorSchema
@@ -13,7 +13,7 @@ import { Error57 } from '../models/error57.js';
 interface FilesListErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error57;
+  error: FilesListErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

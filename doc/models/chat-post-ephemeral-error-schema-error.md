@@ -14,7 +14,7 @@ Schema for error response from chat.postEphemeral method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error24`](../../doc/models/error-24.md) | Required | - |
+| `error` | [`ChatPostEphemeralErrorEnum`](../../doc/models/chat-post-ephemeral-error-enum.md) | Required | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `additionalProperties` | `Record<string, unknown>` | Optional | - |
 

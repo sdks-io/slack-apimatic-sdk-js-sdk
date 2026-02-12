@@ -14,7 +14,7 @@ Schema for error response from pins.remove method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error64`](../../doc/models/error-64.md) | Required | - |
+| `error` | [`PinsRemoveErrorEnum`](../../doc/models/pins-remove-error-enum.md) | Required | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `additionalProperties` | `Record<string, unknown>` | Optional | - |
 

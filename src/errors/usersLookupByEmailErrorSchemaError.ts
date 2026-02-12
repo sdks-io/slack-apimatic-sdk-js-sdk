@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error94 } from '../models/error94.js';
+import { UsersLookupByEmailErrorEnum } from '../models/usersLookupByEmailErrorEnum.js';
 
 /**
  * Creates an instance of UsersLookupByEmailErrorSchema
@@ -13,7 +13,7 @@ import { Error94 } from '../models/error94.js';
 interface UsersLookupByEmailErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error94;
+  error: UsersLookupByEmailErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

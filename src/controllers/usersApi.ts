@@ -69,8 +69,7 @@ export class UsersApi extends BaseApi {
    *                                    an integer no larger than 1000.
    * @param cursor           Paginate through collections of data by setting the `cursor` parameter to a
    *                                    `next_cursor` attribute returned by a previous request's `response_metadata`.
-   *                                    Default value fetches the first "page" of the collection. See
-   *                                    [pagination](/docs/pagination) for more detail.
+   *                                    Default value fetches the first "page" of the collection.
    * @return Response from the API call
    */
   async usersConversations(
@@ -215,8 +214,7 @@ export class UsersApi extends BaseApi {
    *                                  500 errors.
    * @param cursor         Paginate through collections of data by setting the `cursor` parameter to a
    *                                  `next_cursor` attribute returned by a previous request's `response_metadata`.
-   *                                  Default value fetches the first "page" of the collection. See
-   *                                  [pagination](/docs/pagination) for more detail.
+   *                                  Default value fetches the first "page" of the collection.
    * @param includeLocale  Set this to `true` to receive the locale for users. Defaults to `false`
    * @return Response from the API call
    */

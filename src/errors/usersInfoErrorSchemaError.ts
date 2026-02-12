@@ -5,14 +5,14 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error92 } from '../models/error92.js';
+import { UsersInfoErrorEnum } from '../models/usersInfoErrorEnum.js';
 
 /**
  * Creates an instance of UsersInfoErrorSchema
  */
 interface UsersInfoErrorSchema {
   callstack?: string;
-  error: Error92;
+  error: UsersInfoErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

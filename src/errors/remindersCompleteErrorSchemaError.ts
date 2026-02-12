@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error70 } from '../models/error70.js';
+import { RemindersCompleteErrorEnum } from '../models/remindersCompleteErrorEnum.js';
 
 /**
  * Creates an instance of RemindersCompleteErrorSchema
@@ -13,7 +13,7 @@ import { Error70 } from '../models/error70.js';
 interface RemindersCompleteErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error70;
+  error: RemindersCompleteErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

@@ -14,7 +14,7 @@ Schema for error response from chat.deleteScheduledMessage method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error21`](../../doc/models/error-21.md) | Required | - |
+| `error` | [`ChatDeleteScheduledMessageErrorEnum`](../../doc/models/chat-delete-scheduled-message-error-enum.md) | Required | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `additionalProperties` | `Record<string, unknown>` | Optional | - |
 

@@ -29,8 +29,8 @@ async rtmConnect(
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `token` | `string` | Query, Required | Authentication token. Requires scope: `rtm:stream` |
-| `batchPresenceAware` | `boolean \| undefined` | Query, Optional | Batch presence deliveries via subscription. Enabling changes the shape of `presence_change` events. See [batch presence](/docs/presence-and-status#batching). |
-| `presenceSub` | `boolean \| undefined` | Query, Optional | Only deliver presence events when requested by subscription. See [presence subscriptions](/docs/presence-and-status#subscriptions). |
+| `batchPresenceAware` | `boolean \| undefined` | Query, Optional | Batch presence deliveries via subscription. Enabling changes the shape of `presence_change` events. |
+| `presenceSub` | `boolean \| undefined` | Query, Optional | Only deliver presence events when requested by subscription |
 | `requestOptions` | `RequestOptions \| undefined` | Optional | Pass additional request options. |
 
 ## Requires scope

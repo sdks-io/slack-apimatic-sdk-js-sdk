@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error16 } from '../models/error16.js';
+import { AppsUninstallErrorEnum } from '../models/appsUninstallErrorEnum.js';
 
 /**
  * Creates an instance of AppsUninstallErrorSchema
@@ -13,7 +13,7 @@ import { Error16 } from '../models/error16.js';
 interface AppsUninstallErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error16;
+  error: AppsUninstallErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

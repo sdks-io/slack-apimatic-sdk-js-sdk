@@ -14,7 +14,7 @@ Schema for error response from conversations.leave method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error39`](../../doc/models/error-39.md) | Required | - |
+| `error` | [`ConversationsLeaveErrorEnum`](../../doc/models/conversations-leave-error-enum.md) | Required | - |
 | `needed` | `string \| undefined` | Optional | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `provided` | `string \| undefined` | Optional | - |

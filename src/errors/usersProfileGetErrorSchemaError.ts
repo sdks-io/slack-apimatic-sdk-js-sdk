@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error95 } from '../models/error95.js';
+import { UsersProfileGetErrorEnum } from '../models/usersProfileGetErrorEnum.js';
 
 /**
  * Creates an instance of UsersProfileGetErrorSchema
@@ -13,7 +13,7 @@ import { Error95 } from '../models/error95.js';
 interface UsersProfileGetErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error95;
+  error: UsersProfileGetErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

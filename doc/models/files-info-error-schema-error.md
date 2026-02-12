@@ -14,7 +14,7 @@ Schema for error response from files.info method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error56`](../../doc/models/error-56.md) | Required | - |
+| `error` | [`FilesInfoErrorEnum`](../../doc/models/files-info-error-enum.md) | Required | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `additionalProperties` | `Record<string, unknown>` | Optional | - |
 

@@ -14,7 +14,7 @@ Schema for error response from reactions.add method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error65`](../../doc/models/error-65.md) | Required | - |
+| `error` | [`ReactionsAddErrorEnum`](../../doc/models/reactions-add-error-enum.md) | Required | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `additionalProperties` | `Record<string, unknown>` | Optional | - |
 

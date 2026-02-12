@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error53 } from '../models/error53.js';
+import { DndSetSnoozeErrorEnum } from '../models/dndSetSnoozeErrorEnum.js';
 
 /**
  * Creates an instance of DndSetSnoozeErrorSchema
@@ -13,7 +13,7 @@ import { Error53 } from '../models/error53.js';
 interface DndSetSnoozeErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error53;
+  error: DndSetSnoozeErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error98 } from '../models/error98.js';
+import { UsersSetPhotoErrorEnum } from '../models/usersSetPhotoErrorEnum.js';
 
 /**
  * Creates an instance of UsersSetPhotoErrorSchema
@@ -17,7 +17,7 @@ interface UsersSetPhotoErrorSchema {
   debug_step?: string;
   /** possibly DEV/QA only */
   dims?: string;
-  error: Error98;
+  error: UsersSetPhotoErrorEnum;
   ok: string;
   /** possibly DEV/QA only */
   time_ident?: number;

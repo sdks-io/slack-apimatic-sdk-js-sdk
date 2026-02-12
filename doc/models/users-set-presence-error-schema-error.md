@@ -14,7 +14,7 @@ Schema for error response from users.setPresence method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error99`](../../doc/models/error-99.md) | Required | - |
+| `error` | [`UsersSetPresenceErrorEnum`](../../doc/models/users-set-presence-error-enum.md) | Required | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `additionalProperties` | `Record<string, unknown>` | Optional | - |
 

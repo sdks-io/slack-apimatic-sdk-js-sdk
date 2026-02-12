@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error23 } from '../models/error23.js';
+import { ChatMeMessageErrorEnum } from '../models/chatMeMessageErrorEnum.js';
 
 /**
  * Creates an instance of ChatMeMessageErrorSchema
@@ -13,7 +13,7 @@ import { Error23 } from '../models/error23.js';
 interface ChatMeMessageErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error23;
+  error: ChatMeMessageErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

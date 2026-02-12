@@ -14,7 +14,7 @@ Schema for error response from users.profile.set method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error96`](../../doc/models/error-96.md) | Required | - |
+| `error` | [`UsersProfileSetErrorEnum`](../../doc/models/users-profile-set-error-enum.md) | Required | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `additionalProperties` | `Record<string, unknown>` | Optional | - |
 

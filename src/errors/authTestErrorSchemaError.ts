@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error18 } from '../models/error18.js';
+import { AuthTestErrorEnum } from '../models/authTestErrorEnum.js';
 
 /**
  * Creates an instance of AuthTestErrorSchema
@@ -13,7 +13,7 @@ import { Error18 } from '../models/error18.js';
 interface AuthTestErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error18;
+  error: AuthTestErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

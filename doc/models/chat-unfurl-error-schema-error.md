@@ -14,7 +14,7 @@ Schema for error response from chat.unfurl method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error28`](../../doc/models/error-28.md) | Required | - |
+| `error` | [`ChatUnfurlErrorEnum`](../../doc/models/chat-unfurl-error-enum.md) | Required | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `additionalProperties` | `Record<string, unknown>` | Optional | - |
 

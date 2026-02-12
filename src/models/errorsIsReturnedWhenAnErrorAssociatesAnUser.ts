@@ -11,10 +11,13 @@ import {
   typedExpandoObject,
   unknown,
 } from '../schema.js';
-import { Error35, error35Schema } from './error35.js';
+import {
+  ConversationsInviteErrorEnum,
+  conversationsInviteErrorEnumSchema,
+} from './conversationsInviteErrorEnum.js';
 
 export interface ErrorsIsReturnedWhenAnErrorAssociatesAnUser {
-  error: Error35;
+  error: ConversationsInviteErrorEnum;
   ok: string;
   user?: string;
   additionalProperties?: Record<string, unknown>;
@@ -22,7 +25,7 @@ export interface ErrorsIsReturnedWhenAnErrorAssociatesAnUser {
 
 export const errorsIsReturnedWhenAnErrorAssociatesAnUserSchema: Schema<ErrorsIsReturnedWhenAnErrorAssociatesAnUser> = typedExpandoObject(
   {
-    error: ['error', error35Schema],
+    error: ['error', conversationsInviteErrorEnumSchema],
     ok: ['ok', string()],
     user: ['user', optional(string())],
   },

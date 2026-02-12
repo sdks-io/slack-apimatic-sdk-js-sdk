@@ -7,8 +7,8 @@
 import { AuthorizationCodeAuthManager } from './authorizationCodeAuthManager.js';
 import { HttpClientOptions } from './clientAdapter.js';
 import { LogLevel, PartialLoggingOptions } from './core.js';
-import { OAuthScope, oAuthScopeSchema } from './models/oAuthScope.js';
-import { OAuthToken } from './models/oAuthToken.js';
+import { OauthScope, oauthScopeSchema } from './models/oauthScope.js';
+import { OauthToken } from './models/oauthToken.js';
 import {
   anyOf,
   array,
@@ -28,17 +28,17 @@ export interface Configuration {
   timeout: number;
   environment: Environment;
   authorizationCodeAuthCredentials?: {
-    oAuthClientId: string;
-    oAuthClientSecret: string;
-    oAuthRedirectUri: string;
-    oAuthToken?: OAuthToken;
-    oAuthScopes?: OAuthScope[];
-    oAuthTokenProvider?: (
-      lastOAuthToken: OAuthToken | undefined,
+    oauthClientId: string;
+    oauthClientSecret: string;
+    oauthRedirectUri: string;
+    oauthToken?: OauthToken;
+    oauthScopes?: OauthScope[];
+    oauthTokenProvider?: (
+      lastOAuthToken: OauthToken | undefined,
       authManager: AuthorizationCodeAuthManager
-    ) => Promise<OAuthToken>;
-    oAuthOnTokenUpdate?: (token: OAuthToken) => void;
-    oAuthClockSkew?: number;
+    ) => Promise<OauthToken>;
+    oauthOnTokenUpdate?: (token: OauthToken) => void;
+    oauthClockSkew?: number;
   };
   httpClientOptions?: Partial<HttpClientOptions>;
   unstable_httpClientOptions?: any;
@@ -74,17 +74,17 @@ export namespace Configuration {
     config.environment = envVariables.ENVIRONMENT;
 
     if (
-      envVariables.O_AUTH_CLIENT_ID &&
-      envVariables.O_AUTH_CLIENT_SECRET &&
-      envVariables.O_AUTH_REDIRECT_URI
+      envVariables.OAUTH_CLIENT_ID &&
+      envVariables.OAUTH_CLIENT_SECRET &&
+      envVariables.OAUTH_REDIRECT_URI
     ) {
       config.authorizationCodeAuthCredentials = {
-        oAuthClientId: envVariables.O_AUTH_CLIENT_ID,
-        oAuthClientSecret: envVariables.O_AUTH_CLIENT_SECRET,
-        oAuthRedirectUri: envVariables.O_AUTH_REDIRECT_URI,
-        oAuthToken: envVariables.O_AUTH_TOKEN,
-        oAuthScopes: envVariables.O_AUTH_SCOPES,
-        oAuthClockSkew: envVariables.O_AUTH_CLOCK_SKEW,
+        oauthClientId: envVariables.OAUTH_CLIENT_ID,
+        oauthClientSecret: envVariables.OAUTH_CLIENT_SECRET,
+        oauthRedirectUri: envVariables.OAUTH_REDIRECT_URI,
+        oauthToken: envVariables.OAUTH_TOKEN,
+        oauthScopes: envVariables.OAUTH_SCOPES,
+        oauthClockSkew: envVariables.OAUTH_CLOCK_SKEW,
       };
     }
 
@@ -174,11 +174,11 @@ const configurationSchema: Schema<Partial<Configuration>> = object({
     'authorizationCodeAuthCredentials',
     optional(
       object({
-        oAuthClientId: ['oAuthClientId', string()],
-        oAuthClientSecret: ['oAuthClientSecret', string()],
-        oAuthRedirectUri: ['oAuthRedirectUri', string()],
-        oAuthScopes: ['oAuthScopes', optional(array(oAuthScopeSchema))],
-        oAuthClockSkew: ['oAuthClockSkew', optional(number())],
+        oauthClientId: ['oauthClientId', string()],
+        oauthClientSecret: ['oauthClientSecret', string()],
+        oauthRedirectUri: ['oauthRedirectUri', string()],
+        oauthScopes: ['oauthScopes', optional(array(oauthScopeSchema))],
+        oauthClockSkew: ['oauthClockSkew', optional(number())],
       })
     ),
   ],

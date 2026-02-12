@@ -14,7 +14,7 @@ Schema for error response from users.info method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | - |
-| `error` | [`Error92`](../../doc/models/error-92.md) | Required | - |
+| `error` | [`UsersInfoErrorEnum`](../../doc/models/users-info-error-enum.md) | Required | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `additionalProperties` | `Record<string, unknown>` | Optional | - |
 

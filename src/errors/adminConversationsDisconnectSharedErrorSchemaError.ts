@@ -5,13 +5,13 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error4 } from '../models/error4.js';
+import { AdminConversationsDisconnectSharedErrorEnum } from '../models/adminConversationsDisconnectSharedErrorEnum.js';
 
 /**
  * Creates an instance of AdminConversationsDisconnectSharedErrorSchema
  */
 interface AdminConversationsDisconnectSharedErrorSchema {
-  error: Error4;
+  error: AdminConversationsDisconnectSharedErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

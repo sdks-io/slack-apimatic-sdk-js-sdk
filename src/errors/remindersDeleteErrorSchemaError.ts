@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error71 } from '../models/error71.js';
+import { RemindersDeleteErrorEnum } from '../models/remindersDeleteErrorEnum.js';
 
 /**
  * Creates an instance of RemindersDeleteErrorSchema
@@ -13,7 +13,7 @@ import { Error71 } from '../models/error71.js';
 interface RemindersDeleteErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error71;
+  error: RemindersDeleteErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

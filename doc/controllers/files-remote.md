@@ -195,7 +195,7 @@ async filesRemoteList(
 | `tsFrom` | `number \| undefined` | Query, Optional | Filter files created after this timestamp (inclusive). |
 | `tsTo` | `number \| undefined` | Query, Optional | Filter files created before this timestamp (inclusive). |
 | `limit` | `number \| undefined` | Query, Optional | The maximum number of items to return. |
-| `cursor` | `string \| undefined` | Query, Optional | Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. Default value fetches the first "page" of the collection. See [pagination](/docs/pagination) for more detail. |
+| `cursor` | `string \| undefined` | Query, Optional | Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. Default value fetches the first "page" of the collection. |
 | `requestOptions` | `RequestOptions \| undefined` | Optional | Pass additional request options. |
 
 ## Requires scope

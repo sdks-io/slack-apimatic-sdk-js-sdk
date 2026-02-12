@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error31 } from '../models/error31.js';
+import { ConversationsCloseErrorEnum } from '../models/conversationsCloseErrorEnum.js';
 
 /**
  * Creates an instance of ConversationsCloseErrorSchema
@@ -13,7 +13,7 @@ import { Error31 } from '../models/error31.js';
 interface ConversationsCloseErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error31;
+  error: ConversationsCloseErrorEnum;
   needed?: string;
   ok: string;
   provided?: string;

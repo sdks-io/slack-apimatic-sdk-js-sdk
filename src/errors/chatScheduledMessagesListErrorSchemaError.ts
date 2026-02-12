@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error27 } from '../models/error27.js';
+import { ChatScheduledMessagesListErrorEnum } from '../models/chatScheduledMessagesListErrorEnum.js';
 
 /**
  * Creates an instance of ChatScheduledMessagesListErrorSchema
@@ -13,7 +13,7 @@ import { Error27 } from '../models/error27.js';
 interface ChatScheduledMessagesListErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error27;
+  error: ChatScheduledMessagesListErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

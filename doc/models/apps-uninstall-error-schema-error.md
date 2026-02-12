@@ -14,7 +14,7 @@ Schema for error response from apps.uninstall method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error16`](../../doc/models/error-16.md) | Required | - |
+| `error` | [`AppsUninstallErrorEnum`](../../doc/models/apps-uninstall-error-enum.md) | Required | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `additionalProperties` | `Record<string, unknown>` | Optional | - |
 

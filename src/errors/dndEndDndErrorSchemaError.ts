@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error50 } from '../models/error50.js';
+import { DndEndDndErrorEnum } from '../models/dndEndDndErrorEnum.js';
 
 /**
  * Creates an instance of DndEndDndErrorSchema
@@ -13,7 +13,7 @@ import { Error50 } from '../models/error50.js';
 interface DndEndDndErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error50;
+  error: DndEndDndErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

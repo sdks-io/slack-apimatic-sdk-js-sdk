@@ -14,7 +14,7 @@ Schema for error response from users.list method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error93`](../../doc/models/error-93.md) | Required | - |
+| `error` | [`UsersListErrorEnum`](../../doc/models/users-list-error-enum.md) | Required | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `additionalProperties` | `Record<string, unknown>` | Optional | - |
 

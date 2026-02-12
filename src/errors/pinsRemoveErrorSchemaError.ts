@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error64 } from '../models/error64.js';
+import { PinsRemoveErrorEnum } from '../models/pinsRemoveErrorEnum.js';
 
 /**
  * Creates an instance of PinsRemoveErrorSchema
@@ -13,7 +13,7 @@ import { Error64 } from '../models/error64.js';
 interface PinsRemoveErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error64;
+  error: PinsRemoveErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

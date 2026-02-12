@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error63 } from '../models/error63.js';
+import { PinsListErrorEnum } from '../models/pinsListErrorEnum.js';
 
 /**
  * Creates an instance of PinsListErrorSchema
@@ -13,7 +13,7 @@ import { Error63 } from '../models/error63.js';
 interface PinsListErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error63;
+  error: PinsListErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

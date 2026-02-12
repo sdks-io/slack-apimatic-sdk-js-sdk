@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error61 } from '../models/error61.js';
+import { MigrationExchangeErrorEnum } from '../models/migrationExchangeErrorEnum.js';
 
 /**
  * Creates an instance of MigrationExchangeErrorSchema
@@ -13,7 +13,7 @@ import { Error61 } from '../models/error61.js';
 interface MigrationExchangeErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error61;
+  error: MigrationExchangeErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

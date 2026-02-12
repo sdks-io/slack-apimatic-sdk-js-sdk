@@ -241,7 +241,7 @@ async reactionsList(
 | `full` | `boolean \| undefined` | Query, Optional | If true always return the complete reaction list. |
 | `count` | `number \| undefined` | Query, Optional | - |
 | `page` | `number \| undefined` | Query, Optional | - |
-| `cursor` | `string \| undefined` | Query, Optional | Parameter for pagination. Set `cursor` equal to the `next_cursor` attribute returned by the previous request's `response_metadata`. This parameter is optional, but pagination is mandatory: the default value simply fetches the first "page" of the collection. See [pagination](/docs/pagination) for more details. |
+| `cursor` | `string \| undefined` | Query, Optional | Parameter for pagination. Set `cursor` equal to the `next_cursor` attribute returned by the previous request's `response_metadata`. This parameter is optional, but pagination is mandatory: the default value simply fetches the first "page" of the collection. |
 | `limit` | `number \| undefined` | Query, Optional | The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached. |
 | `requestOptions` | `RequestOptions \| undefined` | Optional | Pass additional request options. |
 

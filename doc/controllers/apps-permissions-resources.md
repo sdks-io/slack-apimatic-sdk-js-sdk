@@ -29,7 +29,7 @@ async appsPermissionsResourcesList(
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `token` | `string` | Query, Required | Authentication token. Requires scope: `none` |
-| `cursor` | `string \| undefined` | Query, Optional | Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. Default value fetches the first "page" of the collection. See [pagination](/docs/pagination) for more detail. |
+| `cursor` | `string \| undefined` | Query, Optional | Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. Default value fetches the first "page" of the collection. |
 | `limit` | `number \| undefined` | Query, Optional | The maximum number of items to return. |
 | `requestOptions` | `RequestOptions \| undefined` | Optional | Pass additional request options. |
 

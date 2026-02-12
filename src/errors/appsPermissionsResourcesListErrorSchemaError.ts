@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error14 } from '../models/error14.js';
+import { AppsPermissionsResourcesListErrorEnum } from '../models/appsPermissionsResourcesListErrorEnum.js';
 
 /**
  * Creates an instance of AppsPermissionsResourcesListErrorSchema
@@ -13,7 +13,7 @@ import { Error14 } from '../models/error14.js';
 interface AppsPermissionsResourcesListErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error14;
+  error: AppsPermissionsResourcesListErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

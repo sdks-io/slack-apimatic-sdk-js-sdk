@@ -13,7 +13,7 @@ Schema for error response from admin.conversations.invite
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `error` | [`Error7`](../../doc/models/error-7.md) | Required | - |
+| `error` | [`AdminConversationsInviteErrorEnum`](../../doc/models/admin-conversations-invite-error-enum.md) | Required | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `additionalProperties` | `Record<string, unknown>` | Optional | - |
 

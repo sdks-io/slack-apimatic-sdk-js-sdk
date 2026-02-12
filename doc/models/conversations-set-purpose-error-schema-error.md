@@ -14,7 +14,7 @@ Schema for error response from conversations.setPurpose method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error46`](../../doc/models/error-46.md) | Required | - |
+| `error` | [`ConversationsSetPurposeErrorEnum`](../../doc/models/conversations-set-purpose-error-enum.md) | Required | - |
 | `needed` | `string \| undefined` | Optional | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `provided` | `string \| undefined` | Optional | - |

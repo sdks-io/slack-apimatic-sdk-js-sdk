@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error81 } from '../models/error81.js';
+import { TeamProfileGetErrorEnum } from '../models/teamProfileGetErrorEnum.js';
 
 /**
  * Creates an instance of TeamProfileGetErrorSchema
@@ -13,7 +13,7 @@ import { Error81 } from '../models/error81.js';
 interface TeamProfileGetErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error81;
+  error: TeamProfileGetErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

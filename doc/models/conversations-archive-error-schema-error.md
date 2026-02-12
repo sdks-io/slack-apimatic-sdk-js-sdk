@@ -14,7 +14,7 @@ Schema for error response from conversations.archive method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error30`](../../doc/models/error-30.md) | Required | - |
+| `error` | [`ConversationsArchiveErrorEnum`](../../doc/models/conversations-archive-error-enum.md) | Required | - |
 | `needed` | `string \| undefined` | Optional | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `provided` | `string \| undefined` | Optional | - |

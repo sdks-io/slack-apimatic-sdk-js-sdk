@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error35 } from '../models/error35.js';
+import { ConversationsInviteErrorEnum } from '../models/conversationsInviteErrorEnum.js';
 import { ErrorsIsReturnedWhenAnErrorAssociatesAnUser } from '../models/errorsIsReturnedWhenAnErrorAssociatesAnUser.js';
 
 /**
@@ -14,7 +14,7 @@ import { ErrorsIsReturnedWhenAnErrorAssociatesAnUser } from '../models/errorsIsR
 interface ConversationsInviteErrorSchema1 {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error?: Error35;
+  error?: ConversationsInviteErrorEnum;
   errors?: ErrorsIsReturnedWhenAnErrorAssociatesAnUser[];
   needed?: string;
   ok: string;

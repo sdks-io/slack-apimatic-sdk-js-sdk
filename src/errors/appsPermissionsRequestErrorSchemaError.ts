@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error13 } from '../models/error13.js';
+import { AppsPermissionsRequestErrorEnum } from '../models/appsPermissionsRequestErrorEnum.js';
 
 /**
  * Creates an instance of AppsPermissionsRequestErrorSchema
@@ -13,7 +13,7 @@ import { Error13 } from '../models/error13.js';
 interface AppsPermissionsRequestErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error13;
+  error: AppsPermissionsRequestErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

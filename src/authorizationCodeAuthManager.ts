@@ -5,47 +5,47 @@
  */
 
 import { isExpired, isValid } from './authentication.js';
-import { OAuthToken } from './models/oAuthToken.js';
+import { OauthToken } from './models/oauthToken.js';
 import { ClientInterface } from './clientInterface.js';
-import { OAuthAuthorizationApi } from './controllers/oAuthAuthorizationApi.js';
-import { OAuthScope } from './models/oAuthScope.js';
+import { OauthAuthorizationApi } from './controllers/oauthAuthorizationApi.js';
+import { OauthScope } from './models/oauthScope.js';
 
 export class AuthorizationCodeAuthManager {
-  private _oAuthClientId: string;
-  private _oAuthClientSecret: string;
-  private _oAuthRedirectUri: string;
-  private _oAuthToken?: OAuthToken;
-  private _oAuthScopes?: OAuthScope[];
-  private _oAuthClockSkew?: number;
-  private _oAuthController: OAuthAuthorizationApi;
+  private _oauthClientId: string;
+  private _oauthClientSecret: string;
+  private _oauthRedirectUri: string;
+  private _oauthToken?: OauthToken;
+  private _oauthScopes?: OauthScope[];
+  private _oauthClockSkew?: number;
+  private _oAuthController: OauthAuthorizationApi;
   private _baseUri: string;
 
   constructor(
     {
-      oAuthClientId,
-      oAuthClientSecret,
-      oAuthRedirectUri,
-      oAuthToken,
-      oAuthScopes,
-      oAuthClockSkew,
+      oauthClientId,
+      oauthClientSecret,
+      oauthRedirectUri,
+      oauthToken,
+      oauthScopes,
+      oauthClockSkew,
     }: {
-      oAuthClientId: string;
-      oAuthClientSecret: string;
-      oAuthRedirectUri: string;
-      oAuthToken?: OAuthToken;
-      oAuthScopes?: OAuthScope[];
-      oAuthClockSkew?: number;
+      oauthClientId: string;
+      oauthClientSecret: string;
+      oauthRedirectUri: string;
+      oauthToken?: OauthToken;
+      oauthScopes?: OauthScope[];
+      oauthClockSkew?: number;
     },
     baseUri: string,
     client: ClientInterface
   ) {
-    this._oAuthClientId = oAuthClientId;
-    this._oAuthClientSecret = oAuthClientSecret;
-    this._oAuthRedirectUri = oAuthRedirectUri;
-    this._oAuthToken = oAuthToken;
-    this._oAuthScopes = oAuthScopes;
-    this._oAuthClockSkew = oAuthClockSkew;
-    this._oAuthController = new OAuthAuthorizationApi(client);
+    this._oauthClientId = oauthClientId;
+    this._oauthClientSecret = oauthClientSecret;
+    this._oauthRedirectUri = oauthRedirectUri;
+    this._oauthToken = oauthToken;
+    this._oauthScopes = oauthScopes;
+    this._oauthClockSkew = oauthClockSkew;
+    this._oAuthController = new OauthAuthorizationApi(client);
     this._baseUri = baseUri;
   }
 
@@ -56,9 +56,9 @@ export class AuthorizationCodeAuthManager {
     let query = this._baseUri + '/authorize';
     const queryParams: Record<string, string | undefined> = {
       response_type: 'code',
-      client_id: this._oAuthClientId,
-      redirect_uri: this._oAuthRedirectUri,
-      scope: this._oAuthScopes?.join(' '),
+      client_id: this._oauthClientId,
+      redirect_uri: this._oauthRedirectUri,
+      scope: this._oauthScopes?.join(' '),
       state: state,
       ...additionalParams,
     };
@@ -75,7 +75,7 @@ export class AuthorizationCodeAuthManager {
       (query.indexOf('?') === -1 ? '?' : '&') + queryString.join('&'));
   }
 
-  public async updateToken(oAuthToken?: OAuthToken): Promise<OAuthToken> {
+  public async updateToken(oAuthToken?: OauthToken): Promise<OauthToken> {
     if (!this.isValid(oAuthToken)) {
       oAuthToken = await this.fetchToken('');
     } else if (this.isExpired(oAuthToken)) {
@@ -84,26 +84,26 @@ export class AuthorizationCodeAuthManager {
     return oAuthToken;
   }
 
-  public isValid(oAuthToken: OAuthToken | undefined): oAuthToken is OAuthToken {
+  public isValid(oAuthToken: OauthToken | undefined): oAuthToken is OauthToken {
     return isValid(oAuthToken);
   }
 
-  public isExpired(oAuthToken: OAuthToken) {
-    return isExpired(oAuthToken, this._oAuthClockSkew);
+  public isExpired(oAuthToken: OauthToken) {
+    return isExpired(oAuthToken, this._oauthClockSkew);
   }
 
   public async fetchToken(
     authorizationCode: string,
     additionalParams?: Record<string, unknown>
-  ): Promise<OAuthToken> {
+  ): Promise<OauthToken> {
     const authorization = this.getClientBasicAuth(
-      this._oAuthClientId,
-      this._oAuthClientSecret
+      this._oauthClientId,
+      this._oauthClientSecret
     );
     const { result } = await this._oAuthController.requestToken(
       authorization,
       authorizationCode,
-      this._oAuthRedirectUri,
+      this._oauthRedirectUri,
       additionalParams
     );
     return this.setExpiry(result);
@@ -111,18 +111,18 @@ export class AuthorizationCodeAuthManager {
 
   public async refreshToken(
     additionalParams?: Record<string, unknown>
-  ): Promise<OAuthToken> {
-    if (typeof this._oAuthToken?.refreshToken === 'undefined') {
+  ): Promise<OauthToken> {
+    if (typeof this._oauthToken?.refreshToken === 'undefined') {
       throw new Error();
     }
     const authorization = this.getClientBasicAuth(
-      this._oAuthClientId,
-      this._oAuthClientSecret
+      this._oauthClientId,
+      this._oauthClientSecret
     );
     const { result } = await this._oAuthController.refreshToken(
       authorization,
-      this._oAuthToken?.refreshToken,
-      this._oAuthScopes?.join(' '),
+      this._oauthToken?.refreshToken,
+      this._oauthScopes?.join(' '),
       additionalParams
     );
     return this.setExpiry(result);
@@ -134,7 +134,7 @@ export class AuthorizationCodeAuthManager {
     )}`;
   }
 
-  private async setExpiry(token: OAuthToken) {
+  private async setExpiry(token: OauthToken) {
     const newToken = token;
     if (newToken.expiresIn) {
       newToken.expiry =

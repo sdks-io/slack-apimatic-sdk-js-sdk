@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error24 } from '../models/error24.js';
+import { ChatPostEphemeralErrorEnum } from '../models/chatPostEphemeralErrorEnum.js';
 
 /**
  * Creates an instance of ChatPostEphemeralErrorSchema
@@ -13,7 +13,7 @@ import { Error24 } from '../models/error24.js';
 interface ChatPostEphemeralErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error24;
+  error: ChatPostEphemeralErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

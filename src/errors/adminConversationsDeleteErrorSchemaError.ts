@@ -5,13 +5,13 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error3 } from '../models/error3.js';
+import { AdminConversationsDeleteErrorEnum } from '../models/adminConversationsDeleteErrorEnum.js';
 
 /**
  * Creates an instance of AdminConversationsDeleteErrorSchema
  */
 interface AdminConversationsDeleteErrorSchema {
-  error: Error3;
+  error: AdminConversationsDeleteErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

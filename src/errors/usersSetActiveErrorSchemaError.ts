@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error97 } from '../models/error97.js';
+import { UsersSetActiveErrorEnum } from '../models/usersSetActiveErrorEnum.js';
 
 /**
  * Creates an instance of UsersSetActiveErrorSchema
@@ -13,7 +13,7 @@ import { Error97 } from '../models/error97.js';
 interface UsersSetActiveErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error97;
+  error: UsersSetActiveErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

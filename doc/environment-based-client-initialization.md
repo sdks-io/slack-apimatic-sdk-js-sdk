@@ -48,10 +48,10 @@ TIMEOUT=30000
 ENVIRONMENT=production
 
 # Authentication Credentials
-O_AUTH_CLIENT_ID=oauthclientid
-O_AUTH_CLIENT_SECRET=oauthclientsecret
-O_AUTH_REDIRECT_URI=oauthredirecturi
-O_AUTH_CLOCK_SKEW=0
+OAUTH_CLIENT_ID=oauthclientid
+OAUTH_CLIENT_SECRET=oauthclientsecret
+OAUTH_REDIRECT_URI=oauthredirecturi
+OAUTH_CLOCK_SKEW=0
 
 # Retry Configuration
 MAX_NUMBER_OF_RETRIES=3

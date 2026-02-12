@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error55 } from '../models/error55.js';
+import { FilesDeleteErrorEnum } from '../models/filesDeleteErrorEnum.js';
 
 /**
  * Creates an instance of FilesDeleteErrorSchema
@@ -13,7 +13,7 @@ import { Error55 } from '../models/error55.js';
 interface FilesDeleteErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error55;
+  error: FilesDeleteErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

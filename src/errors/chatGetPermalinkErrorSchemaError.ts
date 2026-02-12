@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error22 } from '../models/error22.js';
+import { ChatGetPermalinkErrorEnum } from '../models/chatGetPermalinkErrorEnum.js';
 
 /**
  * Creates an instance of ChatGetPermalinkErrorSchema
@@ -13,7 +13,7 @@ import { Error22 } from '../models/error22.js';
 interface ChatGetPermalinkErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error22;
+  error: ChatGetPermalinkErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

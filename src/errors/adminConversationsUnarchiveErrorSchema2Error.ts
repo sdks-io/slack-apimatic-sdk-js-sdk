@@ -5,13 +5,13 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error8 } from '../models/error8.js';
+import { AdminConversationsRenameErrorEnum } from '../models/adminConversationsRenameErrorEnum.js';
 
 /**
  * Creates an instance of AdminConversationsUnarchiveErrorSchema2
  */
 interface AdminConversationsUnarchiveErrorSchema2 {
-  error: Error8;
+  error: AdminConversationsRenameErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

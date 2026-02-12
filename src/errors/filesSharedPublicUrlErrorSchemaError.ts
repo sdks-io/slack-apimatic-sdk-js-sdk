@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error59 } from '../models/error59.js';
+import { FilesSharedPublicUrlErrorEnum } from '../models/filesSharedPublicUrlErrorEnum.js';
 
 /**
  * Creates an instance of FilesSharedPublicUrlErrorSchema
@@ -13,7 +13,7 @@ import { Error59 } from '../models/error59.js';
 interface FilesSharedPublicUrlErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error59;
+  error: FilesSharedPublicUrlErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

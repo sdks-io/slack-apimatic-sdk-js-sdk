@@ -14,7 +14,7 @@ Schema for error response from conversations.invite method
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `callstack` | `string \| undefined` | Optional | Note: PHP callstack is only visible in dev/qa |
-| `error` | [`Error35 \| undefined`](../../doc/models/error-35.md) | Optional | - |
+| `error` | [`ConversationsInviteErrorEnum \| undefined`](../../doc/models/conversations-invite-error-enum.md) | Optional | - |
 | `errors` | [`ErrorsIsReturnedWhenAnErrorAssociatesAnUser[] \| undefined`](../../doc/models/errors-is-returned-when-an-error-associates-an-user.md) | Optional | **Constraints**: *Minimum Items*: `1`, *Unique Items Required* |
 | `needed` | `string \| undefined` | Optional | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |

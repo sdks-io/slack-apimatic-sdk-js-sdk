@@ -5,7 +5,7 @@
  */
 
 import { ApiError } from '../core.js';
-import { Error58 } from '../models/error58.js';
+import { FilesRevokePublicUrlErrorEnum } from '../models/filesRevokePublicUrlErrorEnum.js';
 
 /**
  * Creates an instance of FilesRevokePublicUrlErrorSchema
@@ -13,7 +13,7 @@ import { Error58 } from '../models/error58.js';
 interface FilesRevokePublicUrlErrorSchema {
   /** Note: PHP callstack is only visible in dev/qa */
   callstack?: string;
-  error: Error58;
+  error: FilesRevokePublicUrlErrorEnum;
   ok: string;
   additionalProperties?: Record<string, unknown>;
 }

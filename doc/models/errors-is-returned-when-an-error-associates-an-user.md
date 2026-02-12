@@ -11,7 +11,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `error` | [`Error35`](../../doc/models/error-35.md) | Required | - |
+| `error` | [`ConversationsInviteErrorEnum`](../../doc/models/conversations-invite-error-enum.md) | Required | - |
 | `ok` | `string` | Required, Constant | **Value**: `'False'` |
 | `user` | `string \| undefined` | Optional | **Constraints**: *Pattern*: `^[UW][A-Z0-9]{2,}$` |
 | `additionalProperties` | `Record<string, unknown>` | Optional | - |
